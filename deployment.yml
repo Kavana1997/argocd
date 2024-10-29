@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+  name: deploy-argo
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: argo
+  template:
+    spec: 
+      containers:
+      - name: pod-argo
+        image: nginx
+        ports:
+        - containerPort: 80
+    metadata:
+      labels:
+        app: argo
