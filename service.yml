@@ -6,7 +6,7 @@ spec:
   type: ClusterIP
   ports:
   - name: port-argo
-    protocol: tcp
+    protocol: TCP
     port: 30005
     targetPort: 80
   selector:
